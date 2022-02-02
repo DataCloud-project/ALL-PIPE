@@ -5,6 +5,7 @@
   "editor.formatOnSave": false,
   "prettier.enable": false,
   "eslint.validate": [
-    "javascript", "typescript"
+    "javascript",
+    "typescript"
   ]
 }
