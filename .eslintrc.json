@@ -17,6 +17,7 @@
     "plugin:import/recommended",
     "plugin:import/typescript",
     "plugin:eslint-comments/recommended",
+    "plugin:you-dont-need-lodash-underscore/compatible",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "airbnb-base",
