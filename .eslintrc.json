@@ -1,0 +1,68 @@
+{
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+    "parser": {
+      "ts": "@typescript-eslint/parser"
+    },
+    "ecmaVersion": 2022,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "env": {
+    "browser": true,
+    "vue/setup-compiler-macros": true
+  },
+  "extends": [
+    "plugin:vue/vue3-recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
+    "plugin:eslint-comments/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "airbnb-base",
+    "airbnb-typescript/base",
+    "plugin:unicorn/recommended",
+    "@vue/eslint-config-prettier",
+    "@vue/eslint-config-typescript",
+    "prettier"
+  ],
+  "plugins": [
+    "vue",
+    "prettier",
+    "@typescript-eslint",
+    "simple-import-sort"
+  ],
+  "rules": {
+    "import/first": "warn",
+    "import/newline-after-import": "warn",
+    "import/no-duplicates": "warn",
+    "simple-import-sort/imports": ["warn", {
+      "groups": [
+        ["^\\u0000"],
+        ["^@?\\w", "^@?\\w.*\\u0000$"],
+        ["(?<!\\u0000)$", "(?<=\\u0000)$"],
+        ["^\\.", "^\\..*\\u0000$"]
+      ]
+    }],
+    "simple-import-sort/exports": "warn",
+    "@typescript-eslint/consistent-type-imports": ["warn", {
+      "prefer": "type-imports"
+    }],
+    "@typescript-eslint/return-await": "off",
+    "indent": "off",
+    "function-paren-newline": "off",
+    "unicorn/no-useless-undefined": "off",
+    "@typescript-eslint/explicit-function-return-type": "error",
+    "max-len": ["warn", {
+      "code": 100,
+      "tabWidth": 2,
+      "ignorePattern": "\/\/ eslint-disable-next-line"
+    }],
+    "unicorn/filename-case": ["error", {
+      "cases": {
+        "pascalCase": true,
+        "camelCase": true
+      }
+    }]
+  }
+}
