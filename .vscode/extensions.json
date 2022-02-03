@@ -1,6 +1,7 @@
 {
   "recommendations": [
     "dbaeumer.vscode-eslint",
-    "johnsoncodehk.volar"
+    "johnsoncodehk.volar",
+    "bradlc.vscode-tailwindcss"
   ]
 }
