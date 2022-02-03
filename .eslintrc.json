@@ -55,7 +55,7 @@
     "max-len": ["warn", {
       "code": 100,
       "tabWidth": 2,
-      "ignorePattern": "\/\/ eslint-disable-next-line"
+      "ignorePattern": "(\/\/ eslint-disable-next-line|\/* eslint-(enable|disable))"
     }],
     "unicorn/filename-case": ["error", {
       "cases": {
