@@ -8,8 +8,6 @@ import StepsTabs from "./components/StepsTabs.vue";
     <NavBar />
     <StepsTabs />
 
-    <div class="box p-4 flex-grow">
-      <router-view />
-    </div>
+    <router-view class="box p-4 flex-grow" />
   </div>
 </template>
