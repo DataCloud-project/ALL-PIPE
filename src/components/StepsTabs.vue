@@ -1,5 +1,5 @@
 <template>
-  <div class="btn-group flex shadow-lg">
+  <div class="btn-group flex shadow-lg bg-gray-700">
     <router-link
       :to="{ name: 'discover' }"
       class="btn grow border-0 rounded-none"
