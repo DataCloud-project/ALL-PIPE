@@ -1,5 +1,5 @@
 <template>
-  <iframe class="bg-pink-400 p-0" :src="simulateUrl">simulate</iframe>
+  <iframe class="p-0" :src="simulateUrl">simulate</iframe>
 </template>
 
 <script setup lang="ts">
