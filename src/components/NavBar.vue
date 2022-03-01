@@ -1,7 +1,7 @@
 <template>
   <div class="navbar shadow-lg text-neutral-content flex">
     <router-link :to="{ name: 'home' }" class="flex-1 px-2 mx-2">
-      <span class="text-lg font-bold"> DataCloud ALL-PIPE</span>
+      <span class="text-lg font-bold"> DataCloud Dashboard</span>
     </router-link>
     <div class="flex-none px-2">
       <router-link :to="{ name: 'home' }" class="">

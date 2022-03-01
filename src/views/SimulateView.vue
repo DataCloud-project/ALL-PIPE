@@ -1,10 +1,5 @@
 <template>
-  <iframe class="p-0" :src="simulateUrl">simulate</iframe>
+  <div>
+    <iframe src="https://simpipe.sct.sintef.no/" frameborder="0"></iframe>
+  </div>
 </template>
-
-<script setup lang="ts">
-const simulateUrl = import.meta.env.VITE_SIMULATE_URL;
-if (typeof simulateUrl !== "string") {
-  throw new TypeError("VITE_SIMULATE_URL is not defined correctly");
-}
-</script>

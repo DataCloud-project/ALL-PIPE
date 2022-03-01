@@ -1,0 +1,13 @@
+version: '3'
+services:
+
+  datacloud-toolbox:
+    # for new UI just uncomment the following line
+    image: registry.ubitech.eu/cs3/rnd/h2020-datacloud/datacloud-toolbox/common:1.0.0
+    ports:
+     - 9085:80
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "10"
+    restart: unless-stopped

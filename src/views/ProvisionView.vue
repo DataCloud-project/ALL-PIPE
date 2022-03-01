@@ -1,7 +1,5 @@
 <template>
-  <div class="flex justify-center items-center">
-    <div class="mockup-code w-3/6">
-      <pre data-prefix="$"><code>datacloud provision</code></pre>
-    </div>
+  <div>
+    <iframe src="http://20.71.159.181:30000/" frameborder="0"></iframe>
   </div>
 </template>
