@@ -1,46 +1,70 @@
 <template>
   <div class="btn-group flex shadow-lg bg-gray-700">
-    <router-link
-      :to="{ name: 'discover' }"
-      class="btn grow border-0 rounded-none"
-      active-class="bg-green-700"
-    >
-      Discover
-    </router-link>
-    <router-link
-      :to="{ name: 'define' }"
-      class="btn grow border-0"
-      active-class="bg-green-600"
-    >
-      Define
-    </router-link>
-    <router-link
-      :to="{ name: 'simulate' }"
-      class="btn grow border-0"
-      active-class="bg-yellow-600"
-    >
-      Simulate
-    </router-link>
-    <router-link
-      :to="{ name: 'provision' }"
-      class="btn grow border-0"
-      active-class="bg-yellow-600"
-    >
-      Provision
-    </router-link>
-    <router-link
-      :to="{ name: 'deploy' }"
-      class="btn grow border-0"
-      active-class="bg-orange-700"
-    >
-      Deploy
-    </router-link>
-    <router-link
-      :to="{ name: 'adapt' }"
-      class="btn grow border-0 rounded-none"
-      active-class="bg-orange-700"
-    >
-      Adapt
-    </router-link>
+    <div class="btn grow flex border-0 rounded-none mr-0">
+      <div class="grow" @click="redirect('discover')">Discover</div>
+      <button class="mr-0" @click="openNewTab('discover')">
+        <font-awesome-icon :icon="['fas', 'external-link']" />
+      </button>
+    </div>
+    <div class="btn grow flex border-0 rounded-none mr-0">
+      <div class="grow" @click="redirect('define')">Define</div>
+      <button class="mr-0" @click="openNewTab('define')">
+        <font-awesome-icon :icon="['fas', 'external-link']" />
+      </button>
+    </div>
+    <div class="btn grow flex border-0 rounded-none mr-0">
+      <div class="grow" @click="redirect('simulate')">Simulate</div>
+      <button class="mr-0" @click="openNewTab('simulate')">
+        <font-awesome-icon :icon="['fas', 'external-link']" />
+      </button>
+    </div>
+    <div class="btn grow flex border-0 rounded-none mr-0">
+      <div class="grow" @click="redirect('provision')">Provision</div>
+      <button class="mr-0" @click="openNewTab('provision')">
+        <font-awesome-icon :icon="['fas', 'external-link']" />
+      </button>
+    </div>
+    <div class="btn grow flex border-0 rounded-none mr-0">
+      <div class="grow" @click="redirect('deploy')">Deploy</div>
+      <button class="mr-0" @click="openNewTab('deploy')">
+        <font-awesome-icon :icon="['fas', 'external-link']" />
+      </button>
+    </div>
+    <div class="btn grow flex border-0 rounded-none mr-0">
+      <div class="grow" @click="redirect('adapt')">Adapt</div>
+      <button class="mr-0" @click="openNewTab('adapt')">
+        <font-awesome-icon :icon="['fas', 'external-link']" />
+      </button>
+    </div>
   </div>
 </template>
+<script>
+export default {
+  methods: {
+    redirect(path) {
+      this.$router.push({ name: path });
+    },
+    openNewTab(index) {
+      switch (index) {
+        case "discover":
+          window.open("http://94.177.218.70:7778/");
+          break;
+        case "define":
+          window.open("https://pipelinedesign.azurewebsites.net/");
+          break;
+        case "simulate":
+          window.open("https://simpipe.sct.sintef.no/");
+          break;
+        case "provision":
+          window.open("http://20.71.159.181:30000/");
+          break;
+        case "deploy":
+          window.open("https://datacloud-dep.euprojects.net/");
+          break;
+        default:
+          window.open("https://datacloud-dep.euprojects.net/instance");
+      }
+    },
+  },
+};
+</script>

@@ -11,6 +11,7 @@ import StepsTabs from "./components/StepsTabs.vue";
     <router-view class="box p-4 flex-grow" />
   </div>
 </template>
+
 <style>
 iframe {
   border: none;

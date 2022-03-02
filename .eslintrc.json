@@ -51,7 +51,11 @@
     "indent": "off",
     "function-paren-newline": "off",
     "unicorn/no-useless-undefined": "off",
-    "@typescript-eslint/explicit-function-return-type": "error",
+    "@typescript-eslint/no-unsafe-argument": "off",
+    "typescript-eslint/no-unsafe-member-access": "off",
+    "@typescript-eslint/no-unsafe-call": "off",
+    "@typescript-eslint/no-unsafe-assignment": "off",
+    "@typescript-eslint/no-unsafe-member-access": "off",
     "max-len": ["warn", {
       "code": 100,
       "tabWidth": 2,

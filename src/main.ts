@@ -1,9 +1,14 @@
 import "./index.css";
 
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { createApp } from "vue";
 import { createRouter, createWebHashHistory } from "vue-router";
 
 import App from "./App.vue";
+
+library.add(fas);
 
 /* eslint-disable @typescript-eslint/explicit-function-return-type, @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call */
 const router = createRouter({
@@ -65,4 +70,7 @@ router.beforeEach((to, from, next) => {
   next();
 });
 
-createApp(App).use(router).mount("#app");
+createApp(App)
+  .component("font-awesome-icon", FontAwesomeIcon)
+  .use(router)
+  .mount("#app");
