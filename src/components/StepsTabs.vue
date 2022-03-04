@@ -62,7 +62,7 @@ export default {
           window.open("https://datacloud-dep.euprojects.net/");
           break;
         default:
-          window.open("https://datacloud-dep.euprojects.net/instance");
+          window.open("http://194.182.187.139:5000/pipelines");
       }
     },
   },
