@@ -25,14 +25,14 @@
       </button>
     </div>
     <div class="btn grow flex border-0 rounded-none mr-0">
-      <div class="grow" @click="redirect('deploy')">Deploy</div>
-      <button class="mr-0" @click="openNewTab('deploy')">
+      <div class="grow" @click="redirect('schedule')">Schedule</div>
+      <button class="mr-0" @click="openNewTab('schedule')">
         <font-awesome-icon :icon="['fas', 'external-link']" />
       </button>
     </div>
     <div class="btn grow flex border-0 rounded-none mr-0">
-      <div class="grow" @click="redirect('adapt')">Adapt</div>
-      <button class="mr-0" @click="openNewTab('adapt')">
+      <div class="grow" @click="redirect('deploy')">Deploy</div>
+      <button class="mr-0" @click="openNewTab('deploy')">
         <font-awesome-icon :icon="['fas', 'external-link']" />
       </button>
     </div>
@@ -56,13 +56,13 @@ export default {
           window.open("https://simpipe.sct.sintef.no/");
           break;
         case "provision":
-          window.open("http://20.71.159.181:30000/");
+          window.open("https://rmarket.sintef.cloud/");
           break;
-        case "deploy":
-          window.open("https://datacloud-dep.euprojects.net/");
+        case "schedule":
+          window.open("http://194.182.187.139:5000/pipelines");
           break;
         default:
-          window.open("http://194.182.187.139:5000/pipelines");
+          window.open("https://datacloud-dep.euprojects.net/");
       }
     },
   },

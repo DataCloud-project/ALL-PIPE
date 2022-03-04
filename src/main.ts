@@ -48,9 +48,9 @@ const router = createRouter({
       component: () => import("./views/DeployView.vue"),
     },
     {
-      path: "/adapt",
-      name: "adapt",
-      component: () => import("./views/AdaptView.vue"),
+      path: "/schedule",
+      name: "schedule",
+      component: () => import("./views/ScheduleView.vue"),
     },
   ],
 });
