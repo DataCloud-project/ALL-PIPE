@@ -77,7 +77,7 @@
           class="h-100 p-5 text-white border rounded-3"
           style="background-color: #eee"
         >
-          <h2>R-MARKET (Provision through resource marketplacel)</h2>
+          <h2>R-MARKET (Provision through resource marketplace)</h2>
           <p>
             R-MARKET deploys a decentralised hybrid permissioned and
             permissionless blockchain network that federates a vast set of
