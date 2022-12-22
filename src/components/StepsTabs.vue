@@ -70,7 +70,7 @@ export default {
           window.open("http://94.177.218.70:7778/");
           break;
         case "define":
-          window.open("https://pipelinedesign.azurewebsites.net/");
+          window.open("https://crowdserv.sys.kth.se/");
           break;
         case "simulate":
           window.open("https://simpipe.sct.sintef.no/");
