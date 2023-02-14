@@ -1,5 +1,5 @@
 <template>
   <div>
-    <iframe src="https://rmarket.sintef.cloud/" frameborder="0"></iframe>
+    <iframe src="https://datacloud-market.euprojects.net" frameborder="0"></iframe>
   </div>
 </template>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <iframe
-      src="https://crowdserv.sys.kth.se/"
+      src="https://datacloud-def.euprojects.net"
       frameborder="0"
     ></iframe>
   </div>

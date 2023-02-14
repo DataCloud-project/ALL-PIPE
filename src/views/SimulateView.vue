@@ -1,5 +1,5 @@
 <template>
   <div>
-    <iframe src="https://simpipe.sct.sintef.no/" frameborder="0"></iframe>
+    <iframe src="https://datacloud-sim.euprojects.net" frameborder="0"></iframe>
   </div>
 </template>

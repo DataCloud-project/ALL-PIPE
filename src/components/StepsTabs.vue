@@ -67,19 +67,19 @@ export default {
     openNewTab(index) {
       switch (index) {
         case "discover":
-          window.open("http://94.177.218.70:7778/");
+          window.open("https://datacloud-dis.euprojects.net");
           break;
         case "define":
-          window.open("https://crowdserv.sys.kth.se/");
+          window.open("https://datacloud-def.euprojects.net");
           break;
         case "simulate":
-          window.open("https://simpipe.sct.sintef.no/");
+          window.open("https://datacloud-sim.euprojects.net");
           break;
         case "provision":
-          window.open("https://rmarket.sintef.cloud/");
+          window.open("https://datacloud-market.euprojects.net");
           break;
         case "schedule":
-          window.open("http://194.182.187.139:5000/pipelines");
+          window.open("https://datacloud-ada.euprojects.net");
           break;
         default:
           window.open("https://datacloud-dep.euprojects.net/");
