@@ -67,6 +67,7 @@
         "pascalCase": true,
         "camelCase": true
       }
-    }]
+    }],
+    "unicorn/expiring-todo-comments": "off"
   }
 }

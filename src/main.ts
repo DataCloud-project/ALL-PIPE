@@ -1,10 +1,15 @@
 import "./index.css";
+// eslint-disable-next-line import/no-extraneous-dependencies
+import "vue-toastification/dist/index.css";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { createApp } from "vue";
 import { createRouter, createWebHashHistory } from "vue-router";
+// eslint-disable-next-line import/no-extraneous-dependencies
+import Toast from "vue-toastification";
+import type { PluginOptions } from "vue-toastification";
 
 import App from "./App.vue";
 
@@ -21,6 +26,14 @@ const router = createRouter({
         title: "Home",
       },
       component: () => import("./views/HomeView.vue"),
+    },
+    {
+      path: "/register",
+      name: "register",
+      // meta: {
+      //   title: "Register",
+      // },
+      component: () => import("./views/RegisterView.vue"),
     },
     {
       path: "/discover",
@@ -69,8 +82,11 @@ router.beforeEach((to, from, next) => {
   } - DataCloud ALL-PIPE`;
   next();
 });
-
+const options: PluginOptions = {
+  // You can set your default options here
+};
 createApp(App)
   .component("font-awesome-icon", FontAwesomeIcon)
   .use(router)
+  .use(Toast, options)
   .mount("#app");

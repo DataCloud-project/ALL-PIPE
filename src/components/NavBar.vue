@@ -4,6 +4,11 @@
       <span class="text-lg font-bold"> DataCloud Dashboard</span>
     </router-link>
     <div class="flex-none px-2">
+      <router-link :to="{ name: 'register' }" class="">
+        <span class="text-lg">Register</span>
+      </router-link>
+    </div>
+    <div class="flex-none px-2">
       <router-link :to="{ name: 'home' }" class="">
         <span class="text-lg">Contact us</span>
       </router-link>
