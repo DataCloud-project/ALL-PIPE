@@ -9,11 +9,12 @@ import { createApp } from "vue";
 import { createRouter, createWebHashHistory } from "vue-router";
 // eslint-disable-next-line import/no-extraneous-dependencies
 import Toast from "vue-toastification";
+import type { IconPack } from "@fortawesome/fontawesome-svg-core";
 import type { PluginOptions } from "vue-toastification";
 
 import App from "./App.vue";
 
-library.add(fas);
+library.add(fas as IconPack);
 
 /* eslint-disable @typescript-eslint/explicit-function-return-type, @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call */
 const router = createRouter({
