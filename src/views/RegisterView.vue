@@ -40,7 +40,8 @@
           <input
             v-model="user.organization"
             type="text"
-            class="w-full mt-1 p-2 border rounded-md"
+            class="w-full mt-1 p-2 border rounded-md bg-gray-100 disabled-button"
+            disabled
           />
         </div>
         <div class="mb-4 relative">
@@ -159,10 +160,11 @@ export default {
         password: undefined,
         confirmPassword: undefined,
         realmRoles: [],
-        organization: undefined, // TODO may be needed in future
+        organization: "SANDBOX", // TODO may be needed in future
         // TODO define firstname and lastname fields or provide input fields
-        firstName: "",
-        lastName: "",
+        firstName: "datacloud",
+        lastName: "datacloud",
+        phone: "+306900000000",
       },
       usernameError: "",
       emailError: "",
@@ -209,11 +211,14 @@ export default {
     validatePassword() {
       const { password } = this.user;
 
-      if (password.length < 6) {
-        this.passwordError = "Password must be at least 6 characters long.";
+      if (password.length < 8) {
+        this.passwordError = "Password must be at least 8 characters long.";
       } else if (!/\d/.test(password)) {
         this.passwordError = "Password must contain at least one digit.";
-      } else {
+      } else if (!/[A-Z]/.test(password))
+        this.passwordError =
+          "Password must contain at least one uppercase letter.";
+      else {
         this.passwordError = "";
       }
     },
