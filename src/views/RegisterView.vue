@@ -199,6 +199,7 @@ export default {
           "Username can only contain letters, numbers, and underscores.";
       } else {
         this.usernameError = "";
+        this.user.firstName = username;
       }
     },
     validateEmail() {
@@ -218,6 +219,9 @@ export default {
       } else if (!/[A-Z]/.test(password))
         this.passwordError =
           "Password must contain at least one uppercase letter.";
+      else if (!/[a-z]/.test(password))
+        this.passwordError =
+          "Password must contain at least one lowercase letter.";
       else {
         this.passwordError = "";
       }
@@ -250,7 +254,7 @@ export default {
       }
     },
     async register() {
-      console.log("[LogIn] Trying to sign up...");
+      console.log("[LogIn] Trying to sign up..");
       this.loading = true;
       this.toast.info("Requesting new user registration!");
 
@@ -259,9 +263,10 @@ export default {
       const accessToken = await this.getDatacloudToken();
 
       // TODO fix the link
+      // for the registration
       await axios
         .post(
-          "https://datacloud-dep.euprojects.net/dc/api/v1/datacloud/user/register/keycloak",
+          "https://datacloud-dep.euprojects.net/dc/api/v1/datacloud/user/register/global",
           this.user,
           {
             headers: {

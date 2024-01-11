@@ -1,7 +1,53 @@
 <template>
+  <!-- Landing section with background -->
+  <div class="landing-section">
+    <!-- <div class="centered-content"> -->
+    <div class="container">
+      <div class="row">
+        <p class="main-text centered-content">
+          Enabling the big data pipeline lifecycle on the computing continuum
+        </p>
+      </div>
+      <div class="row">
+        <p class="secondary-text centered-content">
+          DataCloud develops novel methods to support the complete lifecycle of
+          Big Data pipelines processing, enabling their discovery, definition,
+          model-based analysis and optimization, simulation, deployment,
+          adaptive run-time and monitoring on top of decentralized heterogeneous
+          infrastructures on the Computing Continuum.
+        </p>
+        <p class="secondary-text centered-content">
+          DataCloud delivers a toolbox of new languages, methods,
+          infrastructures, and prototypes for discovering, simulating,
+          deploying, and adapting Big Data pipelines on heterogeneous and
+          untrusted resources. DataCloud separates the design from the run-time
+          aspects of Big Data pipeline deployment, empowering domain experts to
+          take an active part in their definitions. Its aim is to lower the
+          technological entry barriers for the incorporation of Big Data
+          pipelines in organizations’ business processes and make them
+          accessible to a wider set of stakeholders regardless of the hardware
+          infrastructure.
+        </p>
+        <p class="secondary-text centered-content">
+          Join the DataCloud Toolbox here Learn how to use DataCloud:
+          <a
+            href="https://datacloud-h2020-documentation.readthedocs.io"
+            class="text-white"
+            >https://datacloud-h2020-documentation.readthedocs.io</a
+          >
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- </div> -->
+
+  <div class="divider-section">
+    <h2>DataCloud Tools</h2>
+  </div>
+
   <div class="px-5">
     <div class="row align-items-md-stretch">
-      <div class="col-md-6">
+      <div class="col-md-2">
         <div
           class="h-100 p-5 text-white border rounded-3"
           style="background-color: #eee"
@@ -19,13 +65,15 @@
           <button
             class="btn btn-success"
             type="button"
-            @click="redirect('discover')"
+            @click="
+              redirectToExternalLink('https://datacloud-dis.euprojects.net')
+            "
           >
             Select
           </button>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-2">
         <div
           class="h-100 p-5 text-white border rounded-3"
           style="background-color: #eee"
@@ -41,16 +89,16 @@
           <button
             class="btn btn-success"
             type="button"
-            @click="redirect('define')"
+            @click="
+              redirectToExternalLink('https://datacloud-def.euprojects.net')
+            "
           >
             Select
           </button>
         </div>
       </div>
-    </div>
 
-    <div class="row align-items-md-stretch" style="margin-top: 2em">
-      <div class="col-md-6">
+      <div class="col-md-2">
         <div
           class="h-100 p-5 text-white border rounded-3"
           style="background-color: #eee"
@@ -66,13 +114,15 @@
           <button
             class="btn btn-success"
             type="button"
-            @click="redirect('simulate')"
+            @click="
+              redirectToExternalLink('https://datacloud-sim.euprojects.net')
+            "
           >
             Select
           </button>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-2">
         <div
           class="h-100 p-5 text-white border rounded-3"
           style="background-color: #eee"
@@ -89,16 +139,18 @@
           <button
             class="btn btn-success"
             type="button"
-            @click="redirect('provision')"
+            @click="
+              redirectToExternalLink(
+                'https://r-market.westeurope.cloudapp.azure.com:5555/dashboard'
+              )
+            "
           >
             Select
           </button>
         </div>
       </div>
-    </div>
 
-    <div class="row align-items-md-stretch" style="margin-top: 2em">
-      <div class="col-md-6">
+      <div class="col-md-2">
         <div
           class="h-100 p-5 text-white border rounded-3"
           style="background-color: #eee"
@@ -113,13 +165,15 @@
           <button
             class="btn btn-success"
             type="button"
-            @click="redirect('schedule')"
+            @click="
+              redirectToExternalLink('https://datacloud-ada.euprojects.net')
+            "
           >
             Select
           </button>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-2">
         <div
           class="h-100 p-5 text-white border rounded-3"
           style="background-color: #eee"
@@ -134,13 +188,32 @@
           <button
             class="btn btn-success"
             type="button"
-            @click="redirect('deploy')"
+            @click="
+              redirectToExternalLink('https://datacloud-dep.euprojects.net')
+            "
           >
             Select
           </button>
         </div>
       </div>
     </div>
+  </div>
+  <div class="contactus-section">
+    <div>
+      <h6>Contact Us</h6>
+      <br />
+      <p>
+        <font-awesome-icon :icon="['fas', 'envelope']" />&nbsp; info@ubitech.eu
+      </p>
+    </div>
+  </div>
+  <div class="footer-section">
+    <img src="../assets/europeanlogo.svg" alt="Europe Logo" />
+
+    <h6>
+      This project has received funding from the European Union's Horizon 2020
+      research and innovation programme under grant agreement No 101016835
+    </h6>
   </div>
 </template>
 <script>
@@ -149,6 +222,9 @@ export default {
     redirect(path) {
       this.$router.push({ name: path });
     },
+    redirectToExternalLink(externalUrl) {
+      window.open(externalUrl, "_blank");
+    },
   },
 };
 </script>
@@ -156,4 +232,66 @@ export default {
 <style scoped>
 @import "bootstrap/dist/css/bootstrap.css";
 @import "bootstrap-vue/dist/bootstrap-vue.css";
+
+.landing-section {
+  height: 96vh;
+  background-image: url("../assets/landing.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-text {
+  font-size: xx-large;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana,
+    sans-serif "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #fff;
+  margin-bottom: 10%;
+}
+
+.secondary-text {
+  font-size: x-large;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana,
+    sans-serif "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #fff;
+  /* margin-left: 25%; */
+  /* margin-right: 25%; */
+}
+
+.centered-content {
+  text-align: center;
+}
+
+.divider-section {
+  text-align: center;
+  padding: 260px;
+  background-color: #eee;
+  margin-bottom: 24px;
+}
+
+.divider-section h2 {
+  font-size: 34px;
+  color: #000;
+}
+
+.contactus-section {
+  margin-top: 144px;
+  background-color: #292828;
+  color: #ede4e4;
+  padding: 3vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-section {
+  /* margin-top: 144px; */
+  background-color: #292828;
+  color: #ede4e4;
+  padding: 2vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 </style>

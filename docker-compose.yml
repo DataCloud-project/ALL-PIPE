@@ -3,7 +3,7 @@ services:
 
   datacloud-toolbox:
     # for new UI just uncomment the following line
-    image: registry.ubitech.eu/cs3/rnd/h2020-datacloud/datacloud-toolbox/common:1.6.0
+    image: registry.ubitech.eu/cs3/rnd/h2020-datacloud/datacloud-toolbox/common:1.6.24
     ports:
      - 9085:80
     logging:
