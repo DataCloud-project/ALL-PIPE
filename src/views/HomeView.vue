@@ -203,7 +203,7 @@
       <h6>Contact Us</h6>
       <br />
       <p>
-        <font-awesome-icon :icon="['fas', 'envelope']" />&nbsp; info@ubitech.eu
+        <font-awesome-icon :icon="['fas', 'envelope']" />&nbsp; https://datacloudproject.eu/contacts
       </p>
     </div>
   </div>
@@ -234,7 +234,7 @@ export default {
 @import "bootstrap-vue/dist/bootstrap-vue.css";
 
 .landing-section {
-  height: 96vh;
+  height: 69vh;
   background-image: url("../assets/landing.jpg");
   background-size: cover;
   background-position: center;
@@ -266,7 +266,7 @@ export default {
 
 .divider-section {
   text-align: center;
-  padding: 260px;
+  padding: 30px;
   background-color: #eee;
   margin-bottom: 24px;
 }
