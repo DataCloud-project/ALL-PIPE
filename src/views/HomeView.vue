@@ -200,11 +200,9 @@
   </div>
   <div class="contactus-section">
     <div>
-      <h6>Contact Us</h6>
-      <br />
-      <p>
-        <font-awesome-icon :icon="['fas', 'envelope']" />&nbsp; https://datacloudproject.eu/contacts
-      </p>
+     <h6>
+      <a href="https://datacloudproject.eu/contacts" target="_blank " style="color: white;">Contact Us</a>
+     </h6> 
     </div>
   </div>
   <div class="footer-section">
