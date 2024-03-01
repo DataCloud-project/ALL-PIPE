@@ -40,8 +40,8 @@ keycloak
     pkceMethod: "S256",
   })
   .then((auth) => {
-    console.log(auth);
-    console.log(keycloak.idTokenParsed);
+    // console.log(auth);
+    // console.log(keycloak.idTokenParsed);
     console.log("Keycloak authenticated: ");
     console.log(keycloak.authenticated);
     const maestroUser = keycloak.idTokenParsed?.maestro_username;
@@ -49,6 +49,9 @@ keycloak
     if (auth) {
       if (maestroUser) localStorage.setItem("kc_username", maestroUser);
       if (keycloak.idToken) localStorage.setItem("kc_token", keycloak.idToken);
+      if (maestroUser) localStorage.setItem("currentLoggedUser", maestroUser);
+      if (keycloak.idToken) localStorage.setItem("dcToken", keycloak.idToken);
+
       axios
         .post(
           "https://datacloud-dep.euprojects.net/dc/api/v1/datacloud/auth/login/dataclouddep",
@@ -70,12 +73,17 @@ keycloak
           const cookieOptions = `expires=${expires.toUTCString()}; path=/; domain=euprojects.net; secure; samesite=none`;
           // eslint-disable-next-line unicorn/no-document-cookie, @typescript-eslint/restrict-template-expressions
           document.cookie = `auth_token=${token}; ${cookieOptions}`;
+          // eslint-disable-next-line unicorn/no-document-cookie, @typescript-eslint/restrict-template-expressions
+          document.cookie = `currentLoggedUser=${maestroUser}; ${cookieOptions}`;
+          // eslint-disable-next-line unicorn/no-document-cookie, @typescript-eslint/restrict-template-expressions
+          document.cookie = `dcToken=${keycloak.idToken}; ${cookieOptions}`;
 
           setTimeout(() => {
             const instance = getCurrentInstance();
             instance?.proxy?.$forceUpdate();
             // .$forceUpdate();
-          }, 1000);
+            window.location.reload();
+          }, 50);
         })
         .catch((error) => {
           console.log(error);

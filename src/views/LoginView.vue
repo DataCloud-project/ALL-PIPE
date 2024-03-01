@@ -2,15 +2,6 @@
   <div class="flex items-start pt-16 justify-center bg-gray-100">
     <div class="bg-white p-8 shadow-md rounded-md w-full sm:w-96">
       <h2 class="text-2xl font-semibold mb-4">Datacloud Login</h2>
-
-      <!-- <div class="loader" :class="{ loading: loading }"></div> -->
-      <!-- <div class="container align-center">
-        <h1 class="text-h4 font-weight-bold">Login</h1>
-        <h2 class="text-h5 font-weight-bold">Login</h2>
-      </div> -->
-      <!-- <div v-if="errorSummary !== null" class="alert error">
-        {{ errorSummary }}
-      </div> -->
       <form class="form" @submit.prevent="login">
         <div class="mb-4 mt-2">
           <label for="username">Username</label>
@@ -143,9 +134,7 @@ export default {
         .then((response) => {
           console.log(response);
           console.log("Success");
-          //   this.$store.commit("setUserLoggedIn", {
-          //     username: this.username,
-          //   });
+
           localStorage.setItem("access_token", JSON.stringify(response.data));
           // eslint-disable-next-line unicorn/no-document-cookie
           // document.cookie =

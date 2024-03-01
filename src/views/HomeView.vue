@@ -200,9 +200,21 @@
   </div>
   <div class="contactus-section">
     <div>
-     <h6>
-      <a href="https://datacloudproject.eu/contacts" target="_blank " style="color: white;">Contact Us</a>
-     </h6> 
+      <h6>
+        <a
+          href="https://datacloudproject.eu/contacts"
+          target="_blank "
+          style="color: white"
+          >Contact Us</a
+        >
+      </h6>
+      <a
+        href="https://datacloudproject.eu/
+"
+        target="_blank "
+        style="color: white"
+        >Dataloud Project</a
+      >
     </div>
   </div>
   <div class="footer-section">

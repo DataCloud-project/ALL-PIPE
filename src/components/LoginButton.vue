@@ -19,7 +19,6 @@ export default {
             "https://datacloud-toolbox.euprojects.net/#/deploy?reload=true",
         })
         .then((response) => {
-          // this.redirect("deploy");
           console.log(response);
         })
         .catch((error) => {

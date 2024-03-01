@@ -1,26 +1,34 @@
 <template>
-  <div class="navbar shadow-lg text-neutral-content flex">
-    <img
-      src="../assets/datacloud.png"
-      alt="DataCloud Logo"
-      class="logo-image"
-    />
-    <router-link :to="{ name: 'home' }" class="flex-1 px-2 mx-2">
+  <div class="navbar shadow-lg text-neutral-content flex items-center">
+    <router-link :to="{ name: 'home' }">
+      <span class="text-lg font-bold">
+        <img
+          src="../assets/datacloud.png"
+          alt="DataCloud Logo"
+          class="logo-image"
+        />
+      </span>
+    </router-link>
+
+    <router-link :to="{ name: 'deploy' }" class="px-2 mx-2">
       <span class="text-lg font-bold"> DataCloud Dashboard</span>
     </router-link>
-    <div class="flex-none px-2">
-      <login-button
-        :username="computedUsername"
-        :disabled="lockLogin"
-      ></login-button>
-    </div>
-    <div class="flex-none px-2">
-      <logout-button v-if="lockLogin"></logout-button>
-    </div>
-    <div class="flex-none px-2">
-      <router-link :to="{ name: 'register' }" class="">
-        <span class="text-lg">Register</span>
-      </router-link>
+
+    <div class="ml-auto mr-4 flex space-x-2">
+      <div>
+        <login-button
+          :username="computedUsername"
+          :disabled="lockLogin"
+        ></login-button>
+      </div>
+      <div>
+        <logout-button v-if="lockLogin"></logout-button>
+      </div>
+      <div>
+        <router-link :to="{ name: 'register' }">
+          <span class="text-lg">Register</span>
+        </router-link>
+      </div>
     </div>
   </div>
 </template>
