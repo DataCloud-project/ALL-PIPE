@@ -24,7 +24,7 @@
       <div>
         <logout-button v-if="lockLogin"></logout-button>
       </div>
-      <div>
+      <div v-if="!lockLogin">
         <router-link :to="{ name: 'register' }">
           <span class="text-lg">Register</span>
         </router-link>

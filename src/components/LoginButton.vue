@@ -15,8 +15,7 @@ export default {
       console.log("Trying to login");
       this.$keycloak
         .login({
-          redirectUri:
-            "https://datacloud-toolbox.euprojects.net/#/deploy?reload=true",
+          redirectUri: "https://datacloud-toolbox.euprojects.net/#/deploy",
         })
         .then((response) => {
           console.log(response);
